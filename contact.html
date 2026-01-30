@@ -101,6 +101,9 @@
   </button>
 
 </form>
+<p id="successMsg" style="display:none; color:green; font-weight:600;">
+  ✅ Thank you! We’ll contact you shortly on WhatsApp.
+</p>
 
   </div>
 </section>
@@ -160,6 +163,8 @@
 <script>
 function sendToWhatsApp() {
 
+  document.getElementById("successMsg").style.display = "block";
+
   var name = document.querySelector('input[name="name"]').value;
   var phone = document.querySelector('input[name="phone"]').value;
   var email = document.querySelector('input[name="email"]').value;
@@ -176,11 +181,19 @@ function sendToWhatsApp() {
     "Course: " + course + "%0A" +
     "Message: " + message;
 
-  var url = "https://wa.me/" + whatsappNumber + "?text=" + text;
-
-  window.open(url, "_blank");
+  window.open(
+    "https://wa.me/" + whatsappNumber + "?text=" + text,
+    "_blank"
+  );
 }
 </script>
+
+<a href="https://wa.me/917004081190"
+   class="whatsapp-float"
+   target="_blank"
+   title="Chat on WhatsApp">
+  💬
+</a>
 
 
 </body>
