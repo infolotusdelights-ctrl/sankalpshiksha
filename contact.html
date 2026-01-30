@@ -152,6 +152,30 @@
     © 2026 Sankalp Siksha. All rights reserved.
   </p>
 </footer>
+<script>
+function sendToWhatsApp() {
+
+  var name = document.querySelector('input[name="name"]').value;
+  var phone = document.querySelector('input[name="phone"]').value;
+  var email = document.querySelector('input[name="email"]').value;
+  var course = document.querySelector('input[name="course"]').value;
+  var message = document.querySelector('textarea[name="message"]').value;
+
+  var whatsappNumber = "917004081190"; // 🔴 CHANGE if needed
+
+  var text =
+    "New Inquiry - Sankalp Siksha%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Email: " + email + "%0A" +
+    "Course: " + course + "%0A" +
+    "Message: " + message;
+
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
