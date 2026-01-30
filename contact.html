@@ -80,23 +80,26 @@
       Fill out the form and our team will contact you shortly
     </p>
 
-    <form class="contact-form">
-      <div class="grid-2">
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Mobile Number" required>
-      </div>
+   <form class="contact-form" onsubmit="sendToWhatsApp(); return false;">
 
-      <div class="grid-2">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Interested Course">
-      </div>
+  <div class="grid-2">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="tel" name="phone" placeholder="Mobile Number" required>
+  </div>
 
-      <textarea rows="5" placeholder="Your Message"></textarea>
+  <div class="grid-2">
+    <input type="email" name="email" placeholder="Email Address">
+    <input type="text" name="course" placeholder="Interested Course">
+  </div>
 
-      <button type="submit" class="btn btn-primary">
-        Submit Inquiry
-      </button>
-    </form>
+  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Submit Inquiry
+  </button>
+
+</form>
+
   </div>
 </section>
 
