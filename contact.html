@@ -80,7 +80,9 @@
       Fill out the form and our team will contact you shortly
     </p>
 
-   <form class="contact-form" onsubmit="sendToWhatsApp(); return false;">
+   <form class="contact-form" action="send-mail.php" method="POST"
+      onsubmit="sendToWhatsApp();">
+
 
   <div class="grid-2">
     <input type="text" name="name" placeholder="Full Name" required>
@@ -164,7 +166,7 @@ function sendToWhatsApp() {
   var course = document.querySelector('input[name="course"]').value;
   var message = document.querySelector('textarea[name="message"]').value;
 
-  var whatsappNumber = "917004081190"; // 🔴 CHANGE if needed
+  var whatsappNumber = "917004081190";
 
   var text =
     "New Inquiry - Sankalp Siksha%0A%0A" +
@@ -179,6 +181,7 @@ function sendToWhatsApp() {
   window.open(url, "_blank");
 }
 </script>
+
 
 </body>
 </html>
